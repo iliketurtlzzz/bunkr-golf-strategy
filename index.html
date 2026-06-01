@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bunkr × Marketwake · Marketing Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EFEFF0;
+    --bg-soft: #E8E8EA;
+    --ink: #0A0A0A;
+    --ink-soft: #36363A;
+    --muted: #76777C;
+    --line: #BFC0C4;
+    --lime: #D7FB4F;
+    --lime-deep: #C2EB30;
+    --blue: #1024F0;
+    --blue-soft: #C9CFFC;
+    --pink: #F4378A;
+    --pink-soft: #FFD3E5;
+    --black: #0A0A0A;
+    --white: #FBFBFC;
+    --max: 1340px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4, .serif {
+    font-family: 'Fraunces', 'Times New Roman', serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 0.98;
+    color: var(--ink);
+  }
+  .display {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(54px, 8.5vw, 158px);
+    line-height: 0.93;
+    letter-spacing: -0.028em;
+  }
+  .headline {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 84px);
+    line-height: 1;
+    letter-spacing: -0.022em;
+  }
+  .subhead {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2.4vw, 38px);
+    color: var(--blue);
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+  .body {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(13px, 1.05vw, 17px);
+    line-height: 1.6;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+  .body-lg {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(15px, 1.25vw, 20px);
+    line-height: 1.55;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .body-xl {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(17px, 1.45vw, 24px);
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .eyebrow.bonus {
+    color: var(--pink);
+  }
+  .label-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .label-line::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--blue);
+  }
+
+  /* ============ LAYOUT ============ */
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 32px; width: 100%; }
+  section { padding: 110px 0; position: relative; }
+  section.tight { padding: 70px 0; }
+  section.section-dark { background: var(--ink); color: var(--white); }
+  section.section-dark h1,
+  section.section-dark h2,
+  section.section-dark h3,
+  section.section-dark h4,
+  section.section-dark .headline,
+  section.section-dark .display { color: white; }
+  section.section-dark .body,
+  section.section-dark .body-lg,
+  section.section-dark .body-xl { color: rgba(255,255,255,0.82); }
+  section.section-dark .subhead { color: var(--lime); }
+
+  /* Visibility overrides for white cards inside dark sections */
+  section.section-dark .icp-card:not(.featured) .icp-name { color: var(--ink); }
+  section.section-dark .icp-card:not(.featured) .icp-detail { color: var(--ink-soft); }
+  section.section-dark .icp-card:not(.featured) .icp-message { color: var(--blue); }
+  section.section-dark .gbp-lever-num { color: var(--lime); }
+  section.section-dark .gbp-lever-name { color: white; }
+  section.section-dark .gbp-lever-detail { color: rgba(255,255,255,0.82); }
+  section.section-dark .gbp-lever { border-bottom-color: rgba(255,255,255,0.15); }
+
+  /* ============ TOP NAV ============ */
+  .topnav {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10,10,10,0.88);
+    backdrop-filter: blur(10px);
+    border-radius: 999px;
+    padding: 8px 8px 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    z-index: 100;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+  }
+  .topnav .brand {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .topnav nav { display: flex; gap: 2px; }
+  .topnav nav a {
+    color: rgba(255,255,255,0.72);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: all 0.15s;
+  }
+  .topnav nav a:hover { color: white; background: rgba(255,255,255,0.12); }
+  .topnav nav a.bonus { color: var(--pink-soft); }
+  .topnav nav a.bonus:hover { color: var(--pink); }
+  @media (max-width: 1100px) { .topnav nav { display: none; } }
+
+  /* ============ HERO ============ */
+  .hero {
+    background: var(--ink);
+    color: white;
+    padding: 160px 0 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-eyebrow { color: var(--lime); margin-bottom: 36px; }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(56px, 8.6vw, 158px);
+    line-height: 0.94;
+    letter-spacing: -0.028em;
+    max-width: 17ch;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  .hero h1 em { font-style: italic; color: var(--lime); font-weight: 300; }
+  .hero-circles {
+    position: absolute;
+    right: -10vw;
+    top: 8vw;
+    width: 46vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4vw;
+    z-index: 0;
+    opacity: 0.85;
+  }
+  .hero-circles > div { aspect-ratio: 1; background: var(--lime); border-radius: 50%; }
+  .hero .container { position: relative; z-index: 2; }
+  .hero-meta {
+    margin-top: 90px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 32px;
+  }
+  .hero-meta strong { color: white; font-weight: 600; }
+
+  /* ============ VISION (thesis) ============ */
+  .thesis { padding: 130px 0; }
+  .thesis-text {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6.2vw, 116px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-top: 30px;
+    max-width: 16ch;
+  }
+  .thesis-text em { font-style: italic; color: var(--blue); }
+  .thesis-byline { margin-top: 60px; max-width: 60ch; }
+
+  /* Brand vision callout — anchors the marketing strategy to Bunkr's brand vision */
+  .brand-vision {
+    margin-top: 60px;
+    padding: 40px 46px;
+    background: var(--ink);
+    color: white;
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .bv-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 18px;
+  }
+  .bv-quote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.2vw, 32px);
+    line-height: 1.25;
+    color: white;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .bv-quote p em { font-style: italic; color: var(--lime); }
+  .bv-mission {
+    border-left: 2px solid rgba(255,255,255,0.18);
+    padding-left: 28px;
+  }
+  .bv-mlabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--lime);
+    display: block;
+    margin-bottom: 12px;
+  }
+  .bv-mission p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.88);
+  }
+  @media (max-width: 880px) {
+    .brand-vision { grid-template-columns: 1fr; gap: 26px; padding: 28px 24px; }
+    .bv-mission { border-left: none; border-top: 1px solid rgba(255,255,255,0.18); padding-left: 0; padding-top: 22px; }
+  }
+
+  .vision-block {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .vision-block { grid-template-columns: 1fr; gap: 40px; } }
+  .places-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .place-card {
+    background: var(--white);
+    border: 1px solid var(--bg-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+  .place-card .pc-num {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+  .place-card .pc-name {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .place-card .pc-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .levers-list { display: flex; flex-direction: column; }
+  .lever {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+  }
+  .lever:last-child { border-bottom: none; }
+  .lever-num {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color: var(--blue);
+    line-height: 1;
+  }
+  .lever-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .lever-text em {
+    font-style: normal;
+    color: var(--ink-soft);
+    font-weight: 400;
+    display: block;
+    font-size: 13.5px;
+    margin-top: 4px;
+  }
+  .vision-footnote {
+    margin-top: 26px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    padding: 18px 22px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--bg-soft);
+  }
+  .vision-footnote a { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  /* ============ SECTION HEAD ============ */
+  .section-head {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 60px;
+    align-items: end;
+  }
+  .section-head .left h2 { margin-bottom: 12px; }
+  .section-head .right { max-width: 50ch; }
+  section.section-dark .section-head { border-color: rgba(255,255,255,0.2); }
+  @media (max-width: 880px) { .section-head { grid-template-columns: 1fr; gap: 20px; } }
+
+  /* ============ FINDINGS ============ */
+  .findings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 56px;
+  }
+  .finding-card {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .finding-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(54px, 7vw, 110px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: var(--lime);
+  }
+  .finding-num.blue { color: var(--blue-soft); }
+  .finding-num.pink { color: var(--pink-soft); }
+  .finding-label {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 2vw, 30px);
+    line-height: 1.1;
+    color: white;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+  .finding-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.82);
+  }
+  @media (max-width: 880px) { .findings-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ COMPETITOR GRID ============ */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 1000px) { .comp-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 700px) { .comp-grid { grid-template-columns: 1fr; } }
+
+  .comp-card {
+    background: var(--white);
+    border: 1px solid var(--bg-soft);
+    border-radius: 16px;
+    padding: 30px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 320px;
+    position: relative;
+  }
+  .comp-chip {
+    align-self: flex-start;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: var(--bg-soft);
+    color: var(--ink);
+  }
+  .comp-chip.high { background: var(--pink); color: white; }
+  .comp-chip.medium { background: var(--lime); color: var(--ink); }
+  .comp-chip.future { background: var(--blue); color: white; }
+  .comp-chip.bench { background: var(--ink); color: white; }
+  .comp-name {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(24px, 2.2vw, 32px);
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.018em;
+  }
+  .comp-positioning {
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .comp-implication {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-soft);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .comp-implication strong {
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* ============ WIN BLOCK ============ */
+  .win-block {
+    margin-top: 50px;
+    background: var(--blue);
+    color: white;
+    border-radius: 18px;
+    padding: 44px 50px;
+  }
+  .win-block h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 3vw, 46px);
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.05;
+  }
+  .win-block .win-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    margin-top: 22px;
+  }
+  .win-list .wl-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+    padding-left: 22px;
+    position: relative;
+  }
+  .win-list .wl-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    background: var(--lime);
+    border-radius: 50%;
+  }
+  .win-list .wl-item strong { color: white; font-weight: 700; }
+  @media (max-width: 880px) { .win-block { padding: 32px 26px; } .win-list { grid-template-columns: 1fr; } }
+
+  /* ============ ICP ============ */
+  .icp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .icp-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid var(--bg-soft);
+    min-height: 380px;
+  }
+  .icp-card.featured { background: var(--blue); color: white; }
+  .icp-tier {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .icp-card.featured .icp-tier { color: var(--lime); }
+  .icp-name {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(26px, 2.4vw, 38px);
+    font-weight: 400;
+    letter-spacing: -0.018em;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .icp-card.featured .icp-name { color: white; }
+  .icp-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .icp-card.featured .icp-detail { color: rgba(255,255,255,0.88); }
+  .icp-message {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.35;
+    color: var(--blue);
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-soft);
+    margin-top: auto;
+  }
+  .icp-card.featured .icp-message { color: var(--lime); border-color: rgba(255,255,255,0.2); }
+  @media (max-width: 880px) { .icp-grid { grid-template-columns: 1fr; } }
+
+  /* ============ FUNNEL ============ */
+  .funnel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .funnel-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid var(--bg-soft);
+    min-height: 460px;
+  }
+  .funnel-card.dark { background: var(--ink); color: white; border-color: var(--ink); }
+  .funnel-card.blue { background: var(--blue); color: white; border-color: var(--blue); }
+  .funnel-stage {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .funnel-card.dark .funnel-stage,
+  .funnel-card.blue .funnel-stage { color: var(--lime); }
+  .funnel-pct {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(60px, 6.5vw, 96px);
+    font-weight: 300;
+    line-height: 0.9;
+    color: var(--blue);
+    letter-spacing: -0.03em;
+  }
+  .funnel-card.dark .funnel-pct,
+  .funnel-card.blue .funnel-pct { color: var(--lime); }
+  .funnel-pct small {
+    font-size: 0.32em;
+    font-family: 'Inter', sans-serif;
+    color: var(--ink-soft);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: inline-block;
+    margin-left: 4px;
+  }
+  .funnel-card.dark .funnel-pct small,
+  .funnel-card.blue .funnel-pct small { color: rgba(255,255,255,0.7); }
+  .funnel-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(24px, 2.2vw, 34px);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.018em;
+  }
+  .funnel-card.dark .funnel-title,
+  .funnel-card.blue .funnel-title { color: white; }
+  .funnel-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .funnel-card.dark .funnel-detail,
+  .funnel-card.blue .funnel-detail { color: rgba(255,255,255,0.88); }
+  .funnel-kpi {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--bg-soft);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+  }
+  .funnel-card.dark .funnel-kpi,
+  .funnel-card.blue .funnel-kpi { color: rgba(255,255,255,0.88); border-color: rgba(255,255,255,0.2); }
+  .funnel-kpi strong { color: var(--blue); }
+  .funnel-card.dark .funnel-kpi strong,
+  .funnel-card.blue .funnel-kpi strong { color: var(--lime); }
+  @media (max-width: 880px) { .funnel-grid { grid-template-columns: 1fr; } }
+
+  /* ============ PIXEL CALLOUT ============ */
+  .pixel-callout {
+    background: var(--pink);
+    color: white;
+    border-radius: 18px;
+    padding: 36px 40px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .pixel-callout .pc-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: white;
+    color: var(--pink);
+    padding: 8px 14px;
+    border-radius: 999px;
+  }
+  .pixel-callout h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 2vw, 32px);
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .pixel-callout p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+  }
+  @media (max-width: 880px) { .pixel-callout { grid-template-columns: 1fr; gap: 16px; padding: 28px; } }
+
+  /* ============ GBP / LEVERS ============ */
+  .gbp-block {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .gbp-block { grid-template-columns: 1fr; gap: 40px; } }
+  .gbp-hero {
+    background: var(--lime);
+    color: var(--ink);
+    border-radius: 18px;
+    padding: 44px 40px;
+    text-align: left;
+  }
+  .gbp-hero .gh-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .gbp-hero .gh-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(96px, 12vw, 180px);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.04em;
+    margin: 12px 0 6px;
+    padding-bottom: 14px;
+  }
+  .gbp-hero .gh-num small {
+    font-size: 0.22em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    display: block;
+    margin-top: 22px;
+    line-height: 1.3;
+  }
+  .gbp-hero .gh-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-top: 16px;
+  }
+  .gbp-levers { display: flex; flex-direction: column; }
+  .gbp-lever {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--bg-soft);
+    align-items: start;
+  }
+  .gbp-lever:last-child { border-bottom: none; }
+  .gbp-lever-num {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--blue);
+    line-height: 1.05;
+  }
+  .gbp-lever-name {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .gbp-lever-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  /* ============ BONUS BANNER ============ */
+  .bonus-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 18px;
+    background: var(--pink);
+    color: white;
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .bonus-banner::before {
+    content: '+';
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    line-height: 1;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* ============ FOUNDER PLAYBOOK ============ */
+  .play-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .play-card {
+    background: var(--white);
+    border: 1px solid var(--bg-soft);
+    border-radius: 18px;
+    padding: 40px 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 480px;
+  }
+  .play-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(64px, 7vw, 110px);
+    font-weight: 300;
+    color: var(--blue);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+  }
+  .play-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(24px, 2.2vw, 34px);
+    font-weight: 400;
+    letter-spacing: -0.018em;
+    line-height: 1.05;
+    color: var(--ink);
+  }
+  .play-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .play-list {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-soft);
+    list-style: none;
+  }
+  .play-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .play-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    background: var(--blue);
+    border-radius: 50%;
+  }
+  .play-tag {
+    align-self: flex-start;
+    background: var(--blue);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 880px) { .play-grid { grid-template-columns: 1fr; } }
+
+  /* ============ REVIEWS HERO (inside founder playbook) ============ */
+  .reviews-hero {
+    background: var(--lime);
+    color: var(--ink);
+    border-radius: 18px;
+    padding: 50px 48px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .reviews-hero .rh-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(120px, 16vw, 240px);
+    font-weight: 300;
+    line-height: 0.9;
+    color: var(--ink);
+    letter-spacing: -0.04em;
+  }
+  .reviews-hero .rh-num small {
+    font-size: 0.18em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: block;
+    margin-top: 8px;
+  }
+  .reviews-hero h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 3vw, 46px);
+    color: var(--ink);
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+  .reviews-hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .reviews-hero p + p { margin-top: 12px; }
+  @media (max-width: 880px) { .reviews-hero { grid-template-columns: 1fr; padding: 36px 28px; gap: 24px; } }
+
+  /* Golf-flavored progress visualization */
+  .rh-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .rh-progress-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .rh-progress-stats {
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+    line-height: 0.9;
+  }
+  .rps-current,
+  .rps-goal {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .rps-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .rps-current .rps-label { color: var(--blue); }
+  .rps-goal .rps-label { color: var(--ink); opacity: 0.6; }
+  .rps-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(64px, 8.5vw, 116px);
+    font-weight: 300;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+  }
+  .rps-current .rps-num { color: var(--blue); }
+  .rps-goal .rps-num { color: var(--ink); }
+  .rps-arrow {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 36px;
+    color: var(--ink);
+    opacity: 0.4;
+    line-height: 1;
+    padding-bottom: 14px;
+  }
+
+  .rh-progress-track {
+    position: relative;
+    height: 36px;
+    padding: 0 4px;
+  }
+  .rpt-rail {
+    position: absolute;
+    left: 0;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .rpt-rail::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 8px,
+      rgba(0, 0, 0, 0.08) 8px,
+      rgba(0, 0, 0, 0.08) 10px
+    );
+  }
+  .rpt-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--ink);
+    border-radius: 999px;
+    z-index: 1;
+  }
+  .rpt-ball {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    background: #FBFBFC;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
+    background-image:
+      radial-gradient(circle at 32% 30%, rgba(0,0,0,0.12) 0.8px, transparent 1.4px),
+      radial-gradient(circle at 56% 30%, rgba(0,0,0,0.12) 0.8px, transparent 1.4px),
+      radial-gradient(circle at 44% 50%, rgba(0,0,0,0.12) 0.8px, transparent 1.4px),
+      radial-gradient(circle at 32% 70%, rgba(0,0,0,0.12) 0.8px, transparent 1.4px),
+      radial-gradient(circle at 56% 70%, rgba(0,0,0,0.12) 0.8px, transparent 1.4px);
+    z-index: 3;
+  }
+  .rpt-flag {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -68%);
+    color: var(--ink);
+    z-index: 2;
+  }
+  .rh-progress-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .rpf-end {
+    color: var(--ink);
+    opacity: 0.55;
+  }
+  .rpf-delta {
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  /* ============ FOUNDER MANIFESTO ============ */
+  .founder-manifesto {
+    margin-top: 60px;
+    background: var(--ink);
+    color: white;
+    border-radius: 18px;
+    padding: 48px 50px;
+  }
+  .founder-manifesto h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 3.4vw, 56px);
+    line-height: 1.05;
+    color: white;
+    max-width: 22ch;
+  }
+  .founder-manifesto p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.85);
+    margin-top: 16px;
+    max-width: 60ch;
+  }
+  .founder-manifesto h3 em { font-style: italic; color: var(--lime); }
+  @media (max-width: 880px) { .founder-manifesto { padding: 32px 28px; } }
+
+  /* Content shot list — sits inside the founder playbook */
+  .shot-banner {
+    margin-top: 60px;
+    background: var(--ink);
+    color: white;
+    border-radius: 18px;
+    padding: 38px 44px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .shot-banner-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 14px;
+  }
+  .shot-banner h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(26px, 3vw, 44px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: white;
+    letter-spacing: -0.018em;
+    max-width: 18ch;
+  }
+  .shot-banner h3 em { color: var(--lime); font-style: italic; }
+  .shot-banner p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.82);
+    max-width: 44ch;
+  }
+  @media (max-width: 880px) { .shot-banner { grid-template-columns: 1fr; padding: 28px 24px; gap: 16px; } }
+
+  .shot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+  }
+  .shot-card {
+    background: var(--white);
+    border: 1px solid var(--bg-soft);
+    border-radius: 16px;
+    padding: 30px 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+  .shot-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--lime);
+  }
+  .shot-reel {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .shot-reel::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 8px;
+    border-color: transparent transparent transparent var(--blue);
+  }
+  .shot-card h4 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 2vw, 28px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+  }
+  .shot-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .shot-list {
+    list-style: none;
+    margin-top: 4px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--bg-soft);
+  }
+  .shot-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding: 3px 0 3px 14px;
+    position: relative;
+  }
+  .shot-list li::before {
+    content: '·';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    color: var(--blue);
+    font-weight: 700;
+  }
+  .shot-tag {
+    align-self: flex-start;
+    margin-top: auto;
+    background: var(--ink);
+    color: var(--lime);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 1000px) { .shot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 700px) { .shot-grid { grid-template-columns: 1fr; } }
+
+  /* ============ CREATORS ============ */
+  .tier-section { margin-top: 60px; }
+  .tier-section:first-of-type { margin-top: 0; }
+  .tier-section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .tier-section-head h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 3.4vw, 52px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .tier-section-head p.body { max-width: 38ch; }
+  .tier-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .tier-label.lime { background: var(--lime); color: var(--ink); }
+  .tier-label.blue { background: var(--blue); color: white; }
+
+  .creator-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 1100px) { .creator-row { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 700px) { .creator-row { grid-template-columns: repeat(2, 1fr); } }
+
+  .creator-card {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 0 var(--line);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bg-soft);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+  a.creator-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.1);
+    border-color: var(--blue);
+  }
+  .creator-avatar {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .creator-avatar::before {
+    content: attr(data-initials);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lime);
+    font-family: 'Fraunces', serif;
+    font-size: clamp(38px, 4vw, 64px);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+  .creator-avatar .platform-chip {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: var(--black);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    z-index: 2;
+  }
+  .creator-avatar .link-arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.95);
+    color: var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.15s, color 0.15s;
+    z-index: 2;
+  }
+  a.creator-card:hover .link-arrow { background: var(--blue); color: white; }
+  .creator-meta {
+    padding: 16px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--white);
+  }
+  .creator-name {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.05;
+    letter-spacing: -0.012em;
+  }
+  .creator-handle {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .creator-followers {
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--blue);
+    letter-spacing: 0.02em;
+    margin-top: 4px;
+  }
+  .creator-why {
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--bg-soft);
+  }
+
+  .creator-strategy {
+    margin-top: 60px;
+    background: var(--blue);
+    color: white;
+    border-radius: 18px;
+    padding: 44px 50px;
+  }
+  .creator-strategy h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 3vw, 46px);
+    color: white;
+    margin-bottom: 16px;
+    line-height: 1.05;
+    max-width: 28ch;
+  }
+  .creator-strategy p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.92);
+    max-width: 64ch;
+  }
+  .creator-strategy p + p { margin-top: 14px; }
+  @media (max-width: 880px) { .creator-strategy { padding: 32px 26px; } }
+
+  /* ============ FIX LIST ============ */
+  .fix-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .fix-card {
+    background: var(--white);
+    border: 1px solid var(--bg-soft);
+    border-radius: 16px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 280px;
+  }
+  .fix-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(46px, 5vw, 72px);
+    color: var(--blue);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    font-weight: 300;
+  }
+  .fix-name {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(18px, 1.5vw, 22px);
+    color: var(--ink);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+  }
+  .fix-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  @media (max-width: 1100px) { .fix-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 700px) { .fix-grid { grid-template-columns: 1fr; } }
+  .fix-close {
+    margin-top: 36px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(20px, 2vw, 28px);
+    color: var(--blue);
+    line-height: 1.3;
+    max-width: 50ch;
+  }
+
+  /* ============ PLACEHOLDER ============ */
+  .placeholder {
+    background: rgba(255,255,255,0.04);
+    border: 1px dashed rgba(255,255,255,0.25);
+    border-radius: 18px;
+    padding: 80px 60px;
+    text-align: center;
+  }
+  .placeholder .ph-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 16px;
+  }
+  .placeholder h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 4vw, 60px);
+    color: white;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  .placeholder p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.7);
+    max-width: 56ch;
+    margin: 0 auto;
+  }
+
+  /* ============ CLOSE ============ */
+  section.close {
+    background: var(--ink);
+    color: white;
+    padding: 70px 0 60px;
+  }
+  .close-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+  .close-row .brand-mark {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    letter-spacing: -0.01em;
+    text-transform: none;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <span class="brand">Bunkr × Marketwake</span>
+  <nav>
+    <a href="#vision">Vision</a>
+    <a href="#findings">Findings</a>
+    <a href="#competitors">Competitors</a>
+    <a href="#icp">ICPs</a>
+    <a href="#paid">Paid Social</a>
+    <a href="#gbp">GBP</a>
+    <a href="#fixes">Fixes</a>
+    <a href="#playbook" class="bonus">+ Playbook</a>
+    <a href="#creators" class="bonus">+ Creators</a>
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-circles">
+    <div></div><div></div><div></div>
+    <div></div><div></div><div></div>
+    <div></div><div></div><div></div>
+  </div>
+  <div class="container">
+    <div class="eyebrow hero-eyebrow">Marketing Strategy · Built for The Bunkr Golf Co. · May 2026</div>
+    <h1>Live in every <em>Perimeter golfer's</em> mind.</h1>
+    <div class="hero-meta">
+      <span><strong>Marketwake</strong> · Atlanta</span>
+      <span>Scope · Paid Social · Google Business Profile</span>
+      <span>Dunwoody · Sandy Springs · Brookhaven · Chamblee</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISION ============ -->
+<section id="vision" class="thesis">
+  <div class="container">
+    <div class="label-line">Our Vision</div>
+    <h2 class="thesis-text">
+      Live in every <em>Perimeter golfer's</em> mind.
+    </h2>
+    <p class="body-xl thesis-byline">
+      The Dunwoody native two miles away. The Sandy Springs commuter on 285. The Brookhaven young pro. The tens of thousands who work inside the Perimeter every day and would rather not sit in traffic to get home. Serious players. Weekend hackers. First-timers. The families who follow them. Bunkr is their third place. Our job is to make sure they all know it.
+    </p>
+
+    <div class="brand-vision">
+      <div>
+        <div class="bv-tag">Bunkr's brand vision</div>
+        <div class="bv-quote">
+          <p>"Redefine what indoor golf can be. Prove that simulators are not just for grinders, that golf is as much a <em>lifestyle</em> as it is a sport, and that the social spirit of a country club can belong to <em>everyone.</em>"</p>
+        </div>
+      </div>
+      <div class="bv-mission">
+        <span class="bv-mlabel">The mission</span>
+        <p>The third place for golfers and their families. A members-style social club where community, lifestyle, and the game come together. Serious players, weekend hackers, and first-timers all welcome.</p>
+      </div>
+    </div>
+
+    <div class="vision-block">
+      <div>
+        <div class="eyebrow" style="margin-bottom: 18px;">A third place for golfers (and their families) to ...</div>
+        <div class="places-grid">
+          <div class="place-card">
+            <div class="pc-num">01</div>
+            <div class="pc-name">Play</div>
+            <div class="pc-detail">Tuesday after work. Saturday morning. Real rounds, real swings, real fun. No tee times, no waiting, no weather.</div>
+          </div>
+          <div class="place-card">
+            <div class="pc-num">02</div>
+            <div class="pc-name">Practice</div>
+            <div class="pc-detail">Trackman data, real reps. Improvement that doesn't require five hours and a perfect tee time.</div>
+          </div>
+          <div class="place-card">
+            <div class="pc-num">03</div>
+            <div class="pc-name">Learn</div>
+            <div class="pc-detail">Never picked up a club? You belong here too. Lessons, beginner-friendly bays, no judgment. First-timers as much as grinders.</div>
+          </div>
+          <div class="place-card">
+            <div class="pc-num">04</div>
+            <div class="pc-name">Hang out</div>
+            <div class="pc-detail">Members-style social club. Leagues, watch parties, birthdays, date nights. Country-club community without the gatekeeping.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom: 18px;">What Marketwake owns</div>
+        <div class="levers-list">
+          <div class="lever">
+            <div class="lever-num">01</div>
+            <div class="lever-text">Paid social, built as a real funnel<em>Awareness, consideration, conversion. Three ICPs, tight Perimeter geo, retargeting on.</em></div>
+          </div>
+          <div class="lever">
+            <div class="lever-num">02</div>
+            <div class="lever-text">Google Business Profile and local search<em>Categories, photos, Q&amp;A, services, posts, NAP synced across 70+ directories.</em></div>
+          </div>
+        </div>
+        <div class="vision-footnote">
+          Bunkr's team owns the rest. The behaviors and outreach that compound on top of the funnel are unpacked in the bonus <a href="#playbook">Founder Playbook</a> at the bottom.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINDINGS ============ -->
+<section id="findings" class="section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">What we learned.</h2>
+        <p class="subhead">Three findings make the rest of this plan inevitable.</p>
+      </div>
+      <div class="right">
+        <p class="body">We reviewed five competitors, two paid social audits, and a full local SEO read of Bunkr's footprint inside the Perimeter. The research kept circling back to the same three things.</p>
+      </div>
+    </div>
+    <div class="findings-grid">
+      <div class="finding-card">
+        <div class="finding-num">01</div>
+        <div class="finding-label">The category is split into two lanes.</div>
+        <div class="finding-detail">Five Iron, Fair Way Social, and Atlanta Golf &amp; Social sell golf as a social outing. Back Nine and Golf Envy sell tech and performance credentials. Bunkr's brand sits in Lane A. The current paid social spend is built for Lane B. We are advertising to a different audience than the one the brand is for.</div>
+      </div>
+      <div class="finding-card">
+        <div class="finding-num blue">02</div>
+        <div class="finding-label">The Perimeter paid social space is empty.</div>
+        <div class="finding-detail">Atlanta Golf &amp; Social has 213 Facebook page likes and almost no paid activity. Back Nine is just landing. Fair Way Social is in Alpharetta with a multi-sport story that dilutes its golf identity. Inside the Perimeter, nobody owns paid social. Whoever moves first claims it.</div>
+      </div>
+      <div class="finding-card">
+        <div class="finding-num pink">03</div>
+        <div class="finding-label">Nobody is doing retargeting.</div>
+        <div class="finding-detail">Every cold-ad visitor who does not convert on the first click is being abandoned by every local competitor. Retargeting is a same-week unlock and nobody in our market is doing it.</div>
+      </div>
+    </div>
+
+    <div class="quote-block" style="margin-top: 70px; border-left: 3px solid var(--lime); padding: 12px 0 12px 28px;">
+      <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(22px, 2.2vw, 36px); line-height: 1.25; color: white; font-weight: 400; max-width: 38ch;">
+        We win by owning the local funnel and the local search anchor. Then Bunkr's team builds on top.
+      </p>
+      <cite style="font-family: 'Inter', sans-serif; font-style: normal; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime); margin-top: 14px; display: block;">Marketwake POV</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPETITORS ============ -->
+<section id="competitors">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">Five competitors. <span style="font-style: italic; color: var(--blue);">At a glance.</span></h2>
+      </div>
+      <div class="right">
+        <p class="body">Two real threats. Two barely a threat. One worth studying as a model. The marketing implication for Bunkr sits next to each.</p>
+      </div>
+    </div>
+
+    <div class="comp-grid">
+      <div class="comp-card">
+        <span class="comp-chip high">Highest National Threat</span>
+        <div class="comp-name">Five Iron Golf</div>
+        <div class="comp-positioning">"It's All Good Form." Agency-produced 15-second Meta spots. Best-in-class paid creative in the category. Downtown Atlanta location.</div>
+        <div class="comp-implication">
+          <strong>For Bunkr</strong>
+          We don't compete on production value. We compete on proximity and a tighter funnel. They're 25 minutes south of the Perimeter.
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-chip high">Highest Local Threat</span>
+        <div class="comp-name">Fair Way Social</div>
+        <div class="comp-positioning">Alpharetta, 8 miles north. Multi-sport entertainment venue. Zombie dodgeball plus golf plus restaurant. Strong group event focus.</div>
+        <div class="comp-implication">
+          <strong>For Bunkr</strong>
+          We are pure golf. They split attention across sports. Crew planners who specifically want golf come to us. Inside the Perimeter we're 15 minutes closer than they are.
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-chip medium">Franchise, Expanding</span>
+        <div class="comp-name">Back Nine Golf</div>
+        <div class="comp-positioning">"Where Golf Never Sleeps." Functional positioning, not aspirational. Just landing in Atlanta.</div>
+        <div class="comp-implication">
+          <strong>For Bunkr</strong>
+          They lead with tech. We lead with experience. Our paid funnel and local search anchor beat their utility positioning.
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-chip bench">Local Benchmark</span>
+        <div class="comp-name">Atlanta Golf &amp; Social</div>
+        <div class="comp-positioning">3 bays in Chamblee. Closed-membership waitlist signals real demand. 213 Facebook page likes. Earned local press coverage (Explore Georgia, atlgolfs.com, Adventure Collective) without paid spend.</div>
+        <div class="comp-implication">
+          <strong>For Bunkr</strong>
+          The model worth studying. We run the paid and search game they aren't running.
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-chip future">Future Threat</span>
+        <div class="comp-name">Golf Envy</div>
+        <div class="comp-positioning">California-based, GOLFZON Tour champions. Not in Atlanta yet. Active in local Atlanta golf community.</div>
+        <div class="comp-implication">
+          <strong>For Bunkr</strong>
+          They will arrive. The Perimeter share of voice we build before they get here is the moat.
+        </div>
+      </div>
+    </div>
+
+    <div class="win-block">
+      <h3>What this means for Bunkr's marketing.</h3>
+      <div class="win-list">
+        <div class="wl-item"><strong>We attack on local + paid.</strong> Five Iron is downtown, Fair Way is north, Back Nine is utility, AGS has no paid spend. Inside the Perimeter the paid space is empty.</div>
+        <div class="wl-item"><strong>We attack on retargeting.</strong> None of the local competitors are running it. Same-week unlock the day we ship the funnel.</div>
+        <div class="wl-item"><strong>We attack on local search.</strong> AGS is the only competitor with a serious local citation footprint, and they still leave the local pack open. GBP plus 70+ directory sync wins it.</div>
+        <div class="wl-item"><strong>We attack on the independent identity.</strong> Two real, named owners is a moat against the franchises. How Bunkr's team builds on it lives in the bonus playbook below.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ICP ============ -->
+<section id="icp" class="section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">Who we're going after.</h2>
+      </div>
+      <div class="right">
+        <p class="body">Three audiences. Three messages. Three buying behaviors. Not one broad campaign aimed at "golfers." Each ICP gets its own ad set, its own creative, and its own conversion path inside the paid social funnel.</p>
+      </div>
+    </div>
+    <div class="icp-grid">
+      <div class="icp-card featured">
+        <span class="icp-tier">01 · Primary</span>
+        <h3 class="icp-name">The Dunwoody Native</h3>
+        <p class="icp-detail">28 to 55. Already a golfer. Walking or 5-minute-drive distance. The membership engine of this business. Becomes a regular. Brings friends. Reached through GBP, local search, and tight-radius paid social.</p>
+        <div class="icp-message">"Your place. Two minutes from your driveway."</div>
+      </div>
+      <div class="icp-card">
+        <span class="icp-tier">02 · Primary</span>
+        <h3 class="icp-name">The Perimeter Commuter</h3>
+        <p class="icp-detail">25 to 45. Works inside the Perimeter at State Farm, Cox, Mercedes-Benz HQ, or the office towers along Ashford-Dunwoody and Perimeter Center. Kills two hours after 5pm instead of sitting on 285. After-work leagues, date-night-before-the-drive-home, corporate team outings.</p>
+        <div class="icp-message">"Five minutes from your office. Two hours of fun. Then home."</div>
+      </div>
+      <div class="icp-card">
+        <span class="icp-tier">03 · Primary</span>
+        <h3 class="icp-name">The Crew Planner</h3>
+        <p class="icp-detail">25 to 45. Books for the group. Birthday, bachelorette, bachelor, corporate party. Not necessarily a golfer. The TopGolf-but-closer audience. The highest-revenue, highest-volume use case for the bays.</p>
+        <div class="icp-message">"We host the night. You just show up."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAID SOCIAL ============ -->
+<section id="paid">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">Channel one. <span style="font-style: italic; color: var(--blue);">Meta paid social.</span></h2>
+        <p class="subhead">A real funnel. Three layers. Three ICPs.</p>
+      </div>
+      <div class="right">
+        <p class="body">The account today is 100% conversion targeting 2.6M to 3M cold people inside a 15-mile radius. We are flipping it. Three layers, three audiences, three creative tracks. Each ICP gets its own ad set. The geography tightens. The retargeting runs.</p>
+      </div>
+    </div>
+
+    <div class="funnel-grid">
+      <div class="funnel-card">
+        <span class="funnel-stage">Layer 01 · Awareness</span>
+        <div class="funnel-pct">25-30<small>% of spend</small></div>
+        <div class="funnel-title">Fill the retargeting pool.</div>
+        <div class="funnel-detail">Vertical video. Facility tours, Trackman moments, group fun. Tight 10-mile geo around Dunwoody. Advantage+ audience expansion off. The goal here is not bookings. It is reach and ThruPlay.</div>
+        <div class="funnel-kpi">KPI · <strong>Cost per ThruPlay, video view rate</strong></div>
+      </div>
+      <div class="funnel-card dark">
+        <span class="funnel-stage">Layer 02 · Consideration</span>
+        <div class="funnel-pct">20-25<small>% of spend</small></div>
+        <div class="funnel-title">Move warm audiences down the path.</div>
+        <div class="funnel-detail">Retargets video viewers and page engagers. Membership explainers, "first time at a simulator" content, event recaps. The goal here is landing page views and warm intent.</div>
+        <div class="funnel-kpi">KPI · <strong>Cost per landing page view</strong></div>
+      </div>
+      <div class="funnel-card blue">
+        <span class="funnel-stage">Layer 03 · Conversion</span>
+        <div class="funnel-pct">50<small>% of spend</small></div>
+        <div class="funnel-title">Convert hot, not cold.</div>
+        <div class="funnel-detail">Bay bookings and membership signups. Hot retargeting only. 14 to 30-day website visitors, booking-page abandoners. Hard CTAs, urgency, first-session offers. Not broad cold targeting.</div>
+        <div class="funnel-kpi">KPI · <strong>Cost per booking</strong></div>
+      </div>
+    </div>
+
+    <div class="pixel-callout">
+      <span class="pc-tag">Fix First</span>
+      <div>
+        <h3>The pixel problem we have to solve before we scale.</h3>
+        <p>The Meta pixel is on Bunkr's main domain. The booking flow lives on yourgolfbooking.com. Today, we cannot track post-click conversions. Every dollar we spend on paid social is partially blind. Either we move the pixel onto the booking domain or we move the booking flow onto Bunkr's domain. The whole paid plan rests on this.</p>
+      </div>
+    </div>
+
+    <div class="win-block" style="margin-top: 36px; background: var(--ink);">
+      <h3>What changes from day one.</h3>
+      <div class="win-list">
+        <div class="wl-item"><strong>Geography tightens.</strong> 15-mile radius drops to 10. Advantage+ audience expansion turns off.</div>
+        <div class="wl-item"><strong>Audiences split.</strong> Three ad sets (Native, Commuter, Crew Planner), not one broad campaign.</div>
+        <div class="wl-item"><strong>Retargeting goes live.</strong> Website visitors (14 and 30 day windows), video viewers, page engagers.</div>
+        <div class="wl-item"><strong>Creative goes vertical.</strong> 9:16 video as the primary format. Static used only when offer clarity matters more than vibe.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GBP ============ -->
+<section id="gbp" class="section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">Channel two. <span style="font-style: italic; color: var(--lime);">Google Business Profile.</span></h2>
+        <p class="subhead">The local search anchor. We own this.</p>
+      </div>
+      <div class="right">
+        <p class="body">GBP is the most underused asset Bunkr has. It is claimed, but underbuilt. No primary category locked, few photos, no Q&amp;A seeded, no services listed, no posts. Underneath it, the site has broken footer NAP and no schema. All of that is fixable, and the local pack is winnable.</p>
+      </div>
+    </div>
+
+    <div class="gbp-block">
+      <div class="gbp-hero">
+        <div class="gh-tag">The Goal</div>
+        <div class="gh-num">Top 3<small>in the local pack</small></div>
+        <div class="gh-body">"Indoor golf Dunwoody." "Golf simulator Atlanta Perimeter." "Golf simulator near me" inside the Perimeter. Owning the local pack for these three searches is the GBP outcome we're optimizing for.</div>
+      </div>
+      <div class="gbp-levers">
+        <div class="gbp-lever">
+          <div class="gbp-lever-num">01</div>
+          <div>
+            <div class="gbp-lever-name">Categories locked.</div>
+            <div class="gbp-lever-detail">Primary: Indoor golf course. Secondaries: Sports bar, Event venue, Recreation center. Each secondary is a separate ranking signal.</div>
+          </div>
+        </div>
+        <div class="gbp-lever">
+          <div class="gbp-lever-num">02</div>
+          <div>
+            <div class="gbp-lever-name">20+ photos to start.</div>
+            <div class="gbp-lever-detail">Bay close-ups, food and drink, group shots, exterior signage, a short walk-through video. Every new addition to the space gets photographed and added that week.</div>
+          </div>
+        </div>
+        <div class="gbp-lever">
+          <div class="gbp-lever-num">03</div>
+          <div>
+            <div class="gbp-lever-name">Q&amp;A seeded in the founders' voice.</div>
+            <div class="gbp-lever-detail">BYO clubs? Food? Parking? Memberships? Lessons? Mirror the actual searches people run. Owner-tagged answers carry weight.</div>
+          </div>
+        </div>
+        <div class="gbp-lever">
+          <div class="gbp-lever-num">04</div>
+          <div>
+            <div class="gbp-lever-name">Services listed.</div>
+            <div class="gbp-lever-detail">Bay rental, memberships, private events, corporate, birthdays, lessons. Each one is a ranking signal.</div>
+          </div>
+        </div>
+        <div class="gbp-lever">
+          <div class="gbp-lever-num">05</div>
+          <div>
+            <div class="gbp-lever-name">Weekly posts.</div>
+            <div class="gbp-lever-detail">Events, leagues, watch parties, member spotlights, seasonal packages. Freshness is its own ranking signal.</div>
+          </div>
+        </div>
+        <div class="gbp-lever">
+          <div class="gbp-lever-num">06</div>
+          <div>
+            <div class="gbp-lever-name">Attributes set.</div>
+            <div class="gbp-lever-detail">BYO clubs, group events, wheelchair accessible, free parking, accepts reservations. These show up in filtered searches.</div>
+          </div>
+        </div>
+        <div class="gbp-lever">
+          <div class="gbp-lever-num">07</div>
+          <div>
+            <div class="gbp-lever-name">Listing Management underneath.</div>
+            <div class="gbp-lever-detail">Pushes Bunkr's NAP to 70+ directories from one dashboard, then keeps it consistent. Twenty hours of manual work done in one move.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIXES ============ -->
+<section id="fixes">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">What we fix <span style="font-style: italic; color: var(--blue);">before we scale.</span></h2>
+        <p class="subhead">Five items. None are glamorous. All are foundational.</p>
+      </div>
+      <div class="right">
+        <p class="body">Before paid spend goes up, these are the items that have to be done. Skip them and we are spending money to fill a leaky bucket.</p>
+      </div>
+    </div>
+
+    <div class="fix-grid">
+      <div class="fix-card">
+        <div class="fix-num">01</div>
+        <div class="fix-name">Meta pixel on the booking domain.</div>
+        <div class="fix-detail">Or move bookings on-domain. Either path, but without this, paid social is blind.</div>
+      </div>
+      <div class="fix-card">
+        <div class="fix-num">02</div>
+        <div class="fix-name">Footer NAP fix.</div>
+        <div class="fix-detail">Real address, real phone. Today the address is rendered as three mailto links and the phone is missing.</div>
+      </div>
+      <div class="fix-card">
+        <div class="fix-num">03</div>
+        <div class="fix-name">Schema markup added.</div>
+        <div class="fix-detail">LocalBusiness and GolfCourse schema on the site. Google rich results and AI search both pull from this.</div>
+      </div>
+      <div class="fix-card">
+        <div class="fix-num">04</div>
+        <div class="fix-name">GBP fully built.</div>
+        <div class="fix-detail">Primary category locked, secondaries added, services listed, Q&amp;A seeded, weekly posts running.</div>
+      </div>
+      <div class="fix-card">
+        <div class="fix-num">05</div>
+        <div class="fix-name">QR-to-review live in every bay.</div>
+        <div class="fix-detail">Printed, mounted, staff trained on the ask. Day one of the founder playbook below.</div>
+      </div>
+    </div>
+
+    <p class="fix-close">Skip these and we are spending money to fill a leaky bucket.</p>
+  </div>
+</section>
+
+<!-- ============ BONUS 01: FOUNDER PLAYBOOK ============ -->
+<section id="playbook">
+  <div class="container">
+    <span class="bonus-banner">Bonus 01 · For Bunkr's team</span>
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">The Founder Playbook.</h2>
+        <p class="subhead">What Bunkr's team owns. The behaviors that compound on top.</p>
+      </div>
+      <div class="right">
+        <p class="body">Marketwake delivers the paid funnel and the local search anchor above. This section is the work that sits outside our scope but determines whether the rest compounds or evaporates. Three behaviors, one review goal, and one rule. None of it is glamorous. All of it is owner-led.</p>
+      </div>
+    </div>
+
+    <div class="play-grid">
+      <div class="play-card">
+        <div class="play-num">01</div>
+        <h3>Film constantly. Phone only.</h3>
+        <p>Five Iron pays M&amp;C Saatchi agency money to look authentic. The local counter to that is being authentic. Turn the camera around. Walk the space. Talk about Tuesday's league, the new menu item, what just happened in bay 3.</p>
+        <ul class="play-list">
+          <li>Walkthrough Reels, 60 seconds, no script.</li>
+          <li>Member spotlights with real names.</li>
+          <li>Event hype: Masters, Ryder Cup, watch parties.</li>
+          <li>Trackman moments. Member crushes one. Post it.</li>
+          <li>Before/after of the space. New bay. New decor. New menu.</li>
+        </ul>
+        <span class="play-tag">Six days a week</span>
+      </div>
+
+      <div class="play-card">
+        <div class="play-num">02</div>
+        <h3>Push reviews. Owner-led.</h3>
+        <p>Reviews are not a marketing task. They are a hospitality task. At the end of every session, the staff or the founders ask. QR code at every bay landing on the GBP review link. One-sentence script.</p>
+        <ul class="play-list">
+          <li>"If you had a good time, the biggest thing you can do for us is leave a Google review. Takes 30 seconds."</li>
+          <li>25 reviews in the first 30 days.</li>
+          <li>8 to 10 per month after.</li>
+          <li>QR cards printed, mounted, staff trained on the ask.</li>
+        </ul>
+        <span class="play-tag">The local search lever</span>
+      </div>
+
+      <div class="play-card">
+        <div class="play-num">03</div>
+        <h3>Be the face. People buy from people.</h3>
+        <p>AI search and local search both reward named, real, quotable owners. Ashton and Jonl are real. Use that. The franchises cannot say "the owner bartends here." Bunkr can.</p>
+        <ul class="play-list">
+          <li>Founder bios on the site.</li>
+          <li>Founder voice in the GBP Q&amp;A.</li>
+          <li>Founder face in two-thirds of the Reels.</li>
+          <li>Founder quotes anywhere the brand shows up in press.</li>
+        </ul>
+        <span class="play-tag">The local moat</span>
+      </div>
+    </div>
+
+    <div class="shot-banner">
+      <div>
+        <div class="shot-banner-eyebrow">The Creative Brief</div>
+        <h3>Every ad video should feel right at home in an <em>organic feed.</em></h3>
+      </div>
+      <p>Six core shots to keep on rotation. Phone only. Founder-led where possible. UGC vibe over polish. If it looks like an ad, it's wrong.</p>
+    </div>
+
+    <div class="shot-grid">
+      <div class="shot-card">
+        <span class="shot-reel">Reel 01</span>
+        <h4>The Walkthrough</h4>
+        <p>The signature reel. Start outside at the sign. Show the pilates studio next door, the great built-in anchor for who lives here. Walk in. Hit a bay. Show the bar. End on a swing.</p>
+        <ul class="shot-list">
+          <li>Exterior sign</li>
+          <li>Pilates studio next door</li>
+          <li>Through the door</li>
+          <li>Bays, drinks, the vibe</li>
+          <li>A closing swing</li>
+        </ul>
+        <span class="shot-tag">Signature · 60-90s</span>
+      </div>
+
+      <div class="shot-card">
+        <span class="shot-reel">Reel 02</span>
+        <h4>The Rain Day</h4>
+        <p>Founder outside in a rain suit, weather coming down. "Tee time canceled? Whole weekend washed out? We're open. Bay 3 is empty." Cut to the dry, warm interior. Sell the contrast.</p>
+        <ul class="shot-list">
+          <li>Outside in the rain</li>
+          <li>Founder talks to camera</li>
+          <li>Cut to interior</li>
+          <li>Group laughing in a bay</li>
+        </ul>
+        <span class="shot-tag">Weather-Driven · Opportunistic</span>
+      </div>
+
+      <div class="shot-card">
+        <span class="shot-reel">Reel 03</span>
+        <h4>Event Hype</h4>
+        <p>Build-up content for tentpole events. Masters week. Ryder Cup. League nights. Watch parties. Founder hyping what's coming, then day-of crowd footage.</p>
+        <ul class="shot-list">
+          <li>Empty bays day-of</li>
+          <li>Setup and prep</li>
+          <li>Crowd, drinks, reactions</li>
+          <li>One highlight moment</li>
+        </ul>
+        <span class="shot-tag">Seasonal · Day-Of</span>
+      </div>
+
+      <div class="shot-card">
+        <span class="shot-reel">Reel 04</span>
+        <h4>The 24/7 Member</h4>
+        <p>Members can come on their schedule. Founder talking from inside the facility off-hours. "If you're a member, the bays are yours. Any time. No bookings, no waiting."</p>
+        <ul class="shot-list">
+          <li>Dim facility, off-hours</li>
+          <li>Founder talks the membership perk</li>
+          <li>Key fob entry shot</li>
+          <li>Solo bay session</li>
+        </ul>
+        <span class="shot-tag">Membership Hook</span>
+      </div>
+
+      <div class="shot-card">
+        <span class="shot-reel">Reel 05</span>
+        <h4>"Come With Me" UGC</h4>
+        <p>First-person POV. Like a regular customer or a local creator trying Bunkr for the first time. Phone selfie. "Trying out this new simulator spot in Dunwoody for the first time. Let's see how it goes."</p>
+        <ul class="shot-list">
+          <li>Arrival outside</li>
+          <li>Walking in, check-in</li>
+          <li>Bay setup</li>
+          <li>First swing reaction</li>
+          <li>Drinks and verdict</li>
+        </ul>
+        <span class="shot-tag">UGC Aesthetic · POV</span>
+      </div>
+
+      <div class="shot-card">
+        <span class="shot-reel">Reel 06</span>
+        <h4>Member Spotlight</h4>
+        <p>A regular's story. Why they joined. First round here. Favorite course on Trackman. Filmed in their bay, mid-session, hand-held.</p>
+        <ul class="shot-list">
+          <li>Member intro</li>
+          <li>Why Bunkr</li>
+          <li>Swing on Trackman</li>
+          <li>Favorite virtual course</li>
+          <li>One quote about the place</li>
+        </ul>
+        <span class="shot-tag">Community · Testimonial</span>
+      </div>
+    </div>
+
+    <div class="reviews-hero">
+      <div class="rh-progress">
+        <div class="rh-progress-tag">The climb to 100 · Google reviews · year one</div>
+        <div class="rh-progress-stats">
+          <div class="rps-current">
+            <span class="rps-label">Now</span>
+            <span class="rps-num">12</span>
+          </div>
+          <div class="rps-arrow">to</div>
+          <div class="rps-goal">
+            <span class="rps-label">Year one goal</span>
+            <span class="rps-num">100</span>
+          </div>
+        </div>
+        <div class="rh-progress-track" role="img" aria-label="12 of 100 Google reviews. 88 to go.">
+          <div class="rpt-rail"></div>
+          <div class="rpt-fill" style="width: 12%;"></div>
+          <div class="rpt-ball" style="left: 12%;"></div>
+          <div class="rpt-flag" aria-hidden="true">
+            <svg width="26" height="40" viewBox="0 0 26 40">
+              <line x1="3" y1="4" x2="3" y2="40" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="3" cy="4" r="1.6" fill="currentColor"/>
+              <path d="M3 4 L23 9 Q21 13 23 17 L3 18 Z" fill="#F4378A"/>
+            </svg>
+          </div>
+        </div>
+        <div class="rh-progress-footer">
+          <span class="rpf-end">Tee · 0</span>
+          <span class="rpf-delta">88 reviews to go</span>
+          <span class="rpf-end">Pin · 100</span>
+        </div>
+      </div>
+      <div>
+        <h3>The single biggest lever in local search.</h3>
+        <p>Reviews compound. Each one makes the next one easier to earn, harder for competitors to catch, and more useful as a signal to Google. The 100 number is the goal. The velocity is what matters.</p>
+        <p>QR card at every bay. Asked at the end of every session. Owner-led when possible. This is a hospitality habit before it is a marketing tactic.</p>
+      </div>
+    </div>
+
+    <div class="founder-manifesto">
+      <h3>One thing we do not chase. <em>Production value.</em></h3>
+      <p>The brands that look polished on social cost real money to look that way. The brands that look real on social win this category locally. Phone, daylight, talk and walk. That is the entire production direction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BONUS 02: CREATORS ============ -->
+<section id="creators">
+  <div class="container">
+    <span class="bonus-banner">Bonus 02 · For Bunkr's team</span>
+    <div class="section-head">
+      <div class="left">
+        <h2 class="headline">Atlanta creator <span style="font-style: italic; color: var(--blue);">hit list.</span></h2>
+        <p class="subhead">Hosted experiences, not paid posts.</p>
+      </div>
+      <div class="right">
+        <p class="body">Atlanta-local creators only. Two groups: golf-first on one side, lifestyle and crew-planner on the other. The play is free bay time, drinks, treat them well, let the place sell itself. The first ask is never "post about us." It is "come hang out."</p>
+      </div>
+    </div>
+
+    <!-- GROUP A: GOLF -->
+    <div class="tier-section">
+      <div class="tier-section-head">
+        <div>
+          <span class="tier-label lime">Group A · Atlanta Golf Creators</span>
+          <h3>The people Atlanta golfers already follow.</h3>
+        </div>
+        <p class="body">Local credibility and golf-native audiences. These names move the needle on the Dunwoody Native and Perimeter Commuter ICPs.</p>
+      </div>
+      <div class="creator-row">
+        <a class="creator-card" href="https://www.instagram.com/standregolf/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="SA">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">St. Andre Golf</div>
+            <div class="creator-handle">@standregolf</div>
+            <div class="creator-followers">477K on Instagram</div>
+            <div class="creator-why">Atlanta-based sketch comedy crew. Comedy in a bay is native content. Highest ceiling on the list.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/evanthompson12/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="ET">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Evan Thompson</div>
+            <div class="creator-handle">@evanthompson12</div>
+            <div class="creator-followers">334K on Instagram</div>
+            <div class="creator-why">Georgia-rooted, Mizuno NA ambassador, KSU alum. Self-managed. DM-reachable.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/mikedavisrb/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="MD">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Mike Davis</div>
+            <div class="creator-handle">@mikedavisrb</div>
+            <div class="creator-followers">Atlanta-area golf creator</div>
+            <div class="creator-why">Local credibility play. Georgia / Atlanta-area golf content.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/atl.golfs/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="AG">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">ATL Golfs</div>
+            <div class="creator-handle">@atl.golfs</div>
+            <div class="creator-followers">Atlanta golf editorial hub</div>
+            <div class="creator-why">Already collaborating with competitors. We move first. Editorial fit means easiest yes on the list.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/foreathletes/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="FA">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Fore Athletes</div>
+            <div class="creator-handle">@foreathletes</div>
+            <div class="creator-followers">Atlanta-based community</div>
+            <div class="creator-why">Pro-athlete clientele. Access play, not pure reach play. Perimeter is prime athlete and exec corridor.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/swing_atl/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="SW">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Swing ATL</div>
+            <div class="creator-handle">@swing_atl</div>
+            <div class="creator-followers">9.7K on Instagram</div>
+            <div class="creator-why">ATL golf + entertainment hybrid. Hyperlocal. Featured on Fox 5.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/atlswingking/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="AS">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">ATL Swing King (Shelton)</div>
+            <div class="creator-handle">@atlswingking</div>
+            <div class="creator-followers">3.4K on Instagram</div>
+            <div class="creator-why">Atlanta instructor with 10+ years coaching. Lesson partnership play, not just content collab.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/shegolfsatl/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="SG">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">SheGolfsATL</div>
+            <div class="creator-handle">@shegolfsatl</div>
+            <div class="creator-followers">Atlanta women's golf community</div>
+            <div class="creator-why">Direct fit for the girls-night and date-night use case. Local female golfer audience.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- GROUP B: LIFESTYLE -->
+    <div class="tier-section">
+      <div class="tier-section-head">
+        <div>
+          <span class="tier-label blue">Group B · Atlanta Lifestyle / Crew Planner</span>
+          <h3>The people Atlanta groups already follow.</h3>
+        </div>
+        <p class="body">Date night, things-to-do, food and drink, group experience creators. These hit the Crew Planner ICP directly. Bunkr is native content for every one of these accounts.</p>
+      </div>
+      <div class="creator-row">
+        <a class="creator-card" href="https://www.instagram.com/atlantafortheyoung/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="AY">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Emily Dong · Atlanta for the Young</div>
+            <div class="creator-handle">@atlantafortheyoung</div>
+            <div class="creator-followers">68K on Instagram</div>
+            <div class="creator-why">Young-pro ATL guide. Activities, date night, group hangouts. Crew planner ICP, direct.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/datenightinatlanta/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="DN">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Date Night in Atlanta</div>
+            <div class="creator-handle">@datenightinatlanta</div>
+            <div class="creator-followers">43K on Instagram</div>
+            <div class="creator-why">Husband-wife duo. Bunkr is textbook date-night content. Smallest reach on the list, sharpest fit.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/jacksdayinthelife/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="JD">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Jack Nauseef · Day in the Life</div>
+            <div class="creator-handle">@jacksdayinthelife</div>
+            <div class="creator-followers">Atlanta lifestyle creator</div>
+            <div class="creator-why">Postgrad Atlanta day-in-the-life content. Fitness, run clubs, things to do. Reaches the young-pro audience that fills Bunkr at 6pm.</div>
+          </div>
+        </a>
+        <a class="creator-card" href="https://www.instagram.com/adventuresinatlanta/" target="_blank" rel="noopener noreferrer">
+          <div class="creator-avatar" data-initials="AA">
+            <span class="platform-chip">Instagram</span>
+            <span class="link-arrow">↗</span>
+          </div>
+          <div class="creator-meta">
+            <div class="creator-name">Adventures in Atlanta</div>
+            <div class="creator-handle">@adventuresinatlanta</div>
+            <div class="creator-followers">53K on Instagram</div>
+            <div class="creator-why">Liz &amp; John, husband-wife duo. "Things to do in Atlanta and beyond." Bunkr is a layup for their format.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="creator-strategy">
+      <h3>This is a hosted-experience strategy, not a paid-post strategy.</h3>
+      <p>Free bay time. Drinks. Treat them well. Let the place sell itself. Five Iron pays an agency to manufacture this energy. You get it for free because Bunkr is actually a good place to hang out.</p>
+      <p>The first ask is never "post about us." It is "come hang out." The post is a byproduct of an experience the creator genuinely had. That is also why this strategy compounds: the creators you host first become the warm intros to the creators you host next.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<section class="close">
+  <div class="container">
+    <div class="close-row">
+      <div class="brand-mark">Bunkr × Marketwake</div>
+      <div>Marketing Strategy · v1.0 · May 2026</div>
+      <div>Dunwoody · Atlanta · The Perimeter</div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
