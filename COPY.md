@@ -201,7 +201,47 @@ The account today is 100% conversion targeting 2.6M to 3M cold people inside a 1
 
 ---
 
-## SECTION 6 · CHANNEL TWO · GOOGLE BUSINESS PROFILE
+## SECTION 6 · CREATIVE DIRECTION · DESIGN
+
+**Headline:** Creative direction. *The look.*
+**Subhead:** Moodboard first. Mockups second.
+**Section intro:** Every paid ad has to live on a feed next to organic posts. The creative direction is built to feel native to Instagram and Meta first, polished second. Lifestyle-forward, golf-coded, anti-country-club. Built to resonate, not announce. Bunkr's voice, not an agency's.
+
+### Three creative pillars
+
+**Pillar 01 · Lifestyle, not sport.**
+Golf is the backdrop. The story is community — the people, the night, the crew, the bar, the bay. The swing comes second.
+
+**Pillar 02 · Local, not corporate.**
+Dunwoody specific. Perimeter specific. Independent and named, not a franchise. The brand should feel like a neighbor, not a chain.
+
+**Pillar 03 · Native, not produced.**
+Tactile, authentic, phone-ready. Every static and video should pass the "could this be organic" test before it ships as paid.
+
+### The moodboard
+
+**Subhead:** The moodboard.
+**Vibe target:** Nostalgic, tactile, lived-in. Country-club energy crossed with neighborhood bar warmth. Trackman, leather, brass, denim, dim light. The kind of place that feels authentic, not staged. Where the brand lives.
+**Caption tag:** Moodboard · v1
+**Caption keywords:** Nostalgic · Tactile · Community · Authentic
+
+### The mockups
+
+**Subhead:** The mockups.
+**Section intro:** Seven sample static ads built against the direction above. Each one is designed to slot into a Meta feed without announcing itself as a paid ad. Click any mockup to open it full size.
+
+Seven mockups displayed as a 3-column grid:
+- Mockup 01 — Lifestyle
+- Mockup 02 — Lifestyle
+- Mockup 03 — Conversion
+- Mockup 04 · v1 — Awareness
+- Mockup 04 · v2 — Awareness
+- Mockup 05 — Lifestyle
+- Mockup 06 — Conversion
+
+---
+
+## SECTION 7 · CHANNEL TWO · GOOGLE BUSINESS PROFILE
 
 **Headline:** Channel two. *Google Business Profile.*
 **Subhead:** The local search anchor. We own this.
@@ -240,7 +280,7 @@ Pushes Bunkr's NAP to 70+ directories from one dashboard, then keeps it consiste
 
 ---
 
-## SECTION 7 · WHAT WE FIX BEFORE WE SCALE
+## SECTION 8 · WHAT WE FIX BEFORE WE SCALE
 
 **Headline:** What we fix *before we scale.*
 **Subhead:** Five items. None are glamorous. All are foundational.
@@ -268,7 +308,7 @@ Skip these and we are spending money to fill a leaky bucket.
 
 ---
 
-## SECTION 8 · BONUS 01 · THE FOUNDER PLAYBOOK
+## SECTION 9 · BONUS 01 · THE FOUNDER PLAYBOOK
 
 **Bonus banner:** Bonus 01 · For Bunkr's team
 
@@ -386,7 +426,7 @@ Marketwake delivers the paid funnel and the local search anchor above. This sect
 
 ---
 
-## SECTION 9 · BONUS 02 · ATLANTA CREATOR HIT LIST
+## SECTION 10 · BONUS 02 · ATLANTA CREATOR HIT LIST
 
 **Bonus banner:** Bonus 02 · For Bunkr's team
 
