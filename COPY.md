@@ -210,13 +210,16 @@ The account today is 100% conversion targeting 2.6M to 3M cold people inside a 1
 ### Three creative pillars
 
 **Pillar 01 · Lifestyle, not sport.**
-Golf is the backdrop. The story is community — the people, the night, the crew, the bar, the bay. The swing comes second.
+Golf is the backdrop. The story is the people, the night, the crew, the bar, the bay. A community brand, not a sport brand. The swing comes second.
+*Keyword chip:* Community
 
 **Pillar 02 · Local, not corporate.**
-Dunwoody specific. Perimeter specific. Independent and named, not a franchise. The brand should feel like a neighbor, not a chain.
+Dunwoody specific. Perimeter specific. Independent and named, not a franchise. Built to resonate with neighbors, not impress tourists. The brand feels like someone you already know.
+*Keyword chip:* Resonate
 
 **Pillar 03 · Native, not produced.**
-Tactile, authentic, phone-ready. Every static and video should pass the "could this be organic" test before it ships as paid.
+Nostalgic, tactile, authentic. Trackman, leather, brass, denim, dim light. Phone-ready, made by hand, lived-in. Every static and video should pass the "could this be organic" test before it ships as paid.
+*Keyword chip:* Nostalgic · Tactile · Authentic
 
 ### The moodboard
 

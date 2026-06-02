@@ -1678,6 +1678,21 @@
     line-height: 1.55;
     color: var(--ink-soft);
   }
+  .pillar-keyword {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 7px 13px;
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--lime);
+    color: var(--ink);
+  }
+  .pillar-card.blue .pillar-keyword { background: var(--blue); color: white; }
+  .pillar-card.ink .pillar-keyword { background: var(--ink); color: var(--lime); }
   @media (max-width: 1000px) { .pillars-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 600px) { .pillars-grid { grid-template-columns: 1fr; } }
 
@@ -2039,17 +2054,20 @@
       <div class="pillar-card">
         <span class="pillar-tag">Pillar 01</span>
         <h4>Lifestyle, not sport.</h4>
-        <p>Golf is the backdrop. The story is community — the people, the night, the crew, the bar, the bay. The swing comes second.</p>
+        <p>Golf is the backdrop. The story is the people, the night, the crew, the bar, the bay. A community brand, not a sport brand. The swing comes second.</p>
+        <span class="pillar-keyword">Community</span>
       </div>
-      <div class="pillar-card">
-        <span class="pillar-tag">Pillar 02</span>
+      <div class="pillar-card blue">
+        <span class="pillar-tag" style="color: var(--blue);">Pillar 02</span>
         <h4>Local, not corporate.</h4>
-        <p>Dunwoody specific. Perimeter specific. Independent and named, not a franchise. The brand should feel like a neighbor, not a chain.</p>
+        <p>Dunwoody specific. Perimeter specific. Independent and named, not a franchise. Built to resonate with neighbors, not impress tourists. The brand feels like someone you already know.</p>
+        <span class="pillar-keyword">Resonate</span>
       </div>
-      <div class="pillar-card">
+      <div class="pillar-card ink">
         <span class="pillar-tag">Pillar 03</span>
         <h4>Native, not produced.</h4>
-        <p>Tactile, authentic, phone-ready. Every static and video should pass the "could this be organic" test before it ships as paid.</p>
+        <p>Nostalgic, tactile, authentic. Trackman, leather, brass, denim, dim light. Phone-ready, made by hand, lived-in. Every static and video should pass the "could this be organic" test before it ships as paid.</p>
+        <span class="pillar-keyword">Nostalgic · Tactile · Authentic</span>
       </div>
     </div>
 
