@@ -8,7 +8,7 @@ Sections below mirror the page in the same order. Each block is labeled so your 
 ## HERO
 
 **Eyebrow (top of page):**
-Marketing Strategy · Built for The Bunkr Golf Co. · May 2026
+Marketing Strategy · Built for The Bunkr Golf Co. · June 2026
 
 **Headline:**
 Live in every *Perimeter golfer's* mind.
@@ -453,5 +453,5 @@ Liz & John, husband-wife duo. "Things to do in Atlanta and beyond." Bunkr is a l
 ## CLOSE (footer)
 
 - Bunkr × Marketwake (italic)
-- Marketing Strategy · v1.0 · May 2026
+- Marketing Strategy · v1.0 · June 2026
 - Dunwoody · Atlanta · The Perimeter
