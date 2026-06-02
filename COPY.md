@@ -217,8 +217,8 @@ Golf is the backdrop. The story is the people, the night, the crew, the bar, the
 Dunwoody specific. Perimeter specific. Independent and named, not a franchise. Built to resonate with neighbors, not impress tourists. The brand feels like someone you already know.
 *Keyword chip:* Resonate
 
-**Pillar 03 · Native, not produced.**
-Nostalgic, tactile, authentic. Trackman, leather, brass, denim, dim light. Phone-ready, made by hand, lived-in. Every static and video should pass the "could this be organic" test before it ships as paid.
+**Pillar 03 · Nostalgic, not vintage.**
+There's a difference between vintage and nostalgic. Vintage describes what is old. Nostalgia describes how it makes us feel. One is about age, the other about memory and meaning. Bunkr lives in the second. Tactile, authentic, lived-in. Every static and video should feel like a memory in the making, not a stock photo.
 *Keyword chip:* Nostalgic · Tactile · Authentic
 
 ### The moodboard
