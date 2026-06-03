@@ -169,7 +169,7 @@ The account today is 100% conversion targeting 2.6M to 3M cold people inside a 1
 **Stage label:** Layer 01 · Awareness
 **Percentage:** 25-30% of spend
 **Title:** Fill the retargeting pool.
-**Description:** Video-first, static and design in support. Facility tours, Trackman moments, group fun, lifestyle stills. Tight 10-mile geo around Dunwoody. Advantage+ audience expansion off. The goal here is not bookings. It is reach and ThruPlay.
+**Description:** Video-first, static and design in support. Facility tours, Trackman moments, group fun, lifestyle stills. 15-mile geo around Dunwoody to cast a wider net at the top of the funnel. Advantage+ audience expansion off. The goal here is not bookings. It is reach and ThruPlay.
 **KPI:** Cost per ThruPlay, video view rate
 
 ### Funnel card 02 · Consideration (dark card)
@@ -194,7 +194,7 @@ The account today is 100% conversion targeting 2.6M to 3M cold people inside a 1
 
 ### Black summary block: "What changes from day one."
 
-- **Geography tightens.** 15-mile radius drops to 10. Advantage+ audience expansion turns off.
+- **Geography tightens as we move down the funnel.** 15-mile radius for awareness, tightens to 10 for consideration and conversion. Advantage+ audience expansion turns off.
 - **Audiences split.** Three ad sets (Native, Commuter, Crew Planner), not one broad campaign.
 - **Retargeting goes live.** Website visitors (14 and 30 day windows), video viewers, page engagers.
 - **Video-first, static in support.** 9:16 video is the primary format. Static and design ads run alongside to reinforce the message and hold the feed when video isn't the right play.
