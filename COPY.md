@@ -126,10 +126,10 @@ Two real threats. Two barely a threat. One worth studying as a model. The market
 
 ### Blue summary block at bottom: "What this means for Bunkr's marketing."
 
-- **We attack on local + paid.** Five Iron is downtown, Fair Way is north, Back Nine is utility, AGS has no paid spend. Inside the Perimeter the paid space is empty.
-- **We attack on retargeting.** None of the local competitors are running it. Same-week unlock the day we ship the funnel.
-- **We attack on local search.** AGS is the only competitor with a serious local citation footprint, and they still leave the local pack open. GBP plus 70+ directory sync wins it.
-- **We attack on the independent identity.** Two real, named owners is a moat against the franchises. How Bunkr's team builds on it lives in the bonus playbook below.
+- **We win on local + paid.** Five Iron is downtown, Fair Way is north, Back Nine is utility, AGS has no paid spend. Inside the Perimeter the paid space is empty.
+- **We win on retargeting.** None of the local competitors are running it. Same-week unlock the day we ship the funnel.
+- **We win on local search.** AGS is the only competitor with a serious local citation footprint, and they still leave the local pack open. GBP plus 70+ directory sync wins it.
+- **We win on the independent identity.** Two real, named owners is a moat against the franchises. How Bunkr's team builds on it lives in the bonus playbook below.
 
 ---
 
