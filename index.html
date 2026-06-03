@@ -1696,6 +1696,56 @@
   @media (max-width: 1000px) { .pillars-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 600px) { .pillars-grid { grid-template-columns: 1fr; } }
 
+  /* ============ PRINT (PDF export) ============ */
+  @media print {
+    @page { size: Letter; margin: 0.4in; }
+    html, body { background: white !important; }
+    body { font-size: 12px; }
+
+    /* Each top-level section starts on a fresh page */
+    section { page-break-before: always; break-before: page; padding: 30px 0 !important; }
+    section.hero { page-break-before: auto; break-before: auto; padding: 40px 0 50px !important; }
+    section.close { page-break-before: auto; break-before: auto; padding: 30px 0 !important; }
+
+    /* Never break a card, grid item, or callout across pages */
+    .icp-card, .comp-card, .funnel-card, .play-card, .shot-card, .creator-card,
+    .fix-card, .finding-card, .pillar-card, .place-card, .gbp-lever,
+    .gbp-hero, .pixel-callout, .reviews-hero, .founder-manifesto, .shot-banner,
+    .creator-strategy, .win-block, .brand-vision, .mockup-card, .moodboard-frame,
+    .quote-block, .lever, .vision-footnote {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* Keep headlines with the content that follows */
+    h1, h2, h3, h4, .headline, .subhead, .section-head { page-break-after: avoid; break-after: avoid; }
+
+    /* Hide on-screen chrome that doesn't belong in a printed deck */
+    .topnav, .hero-circles { display: none !important; }
+
+    /* Tighten section heads and grids for print */
+    .section-head { padding-bottom: 24px; margin-bottom: 24px; }
+    .container { max-width: 100%; padding: 0 12px; }
+
+    /* Hero adjustments so it fits on one page */
+    .hero { background: var(--ink) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero h1 { font-size: 56px !important; line-height: 1 !important; max-width: 100% !important; }
+    .hero-meta { margin-top: 30px !important; padding-top: 16px !important; }
+
+    /* Force colors to render */
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+    /* Avoid tiny "widows" / orphans inside flowing paragraphs */
+    p, li { orphans: 3; widows: 3; }
+
+    /* Mockup grid: keep visual density but allow rows to fall onto next page if needed */
+    .mockup-grid, .creator-row, .shot-grid, .play-grid, .pillars-grid, .comp-grid,
+    .icp-grid, .funnel-grid, .fix-grid, .findings-grid {
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+  }
+
   /* ============ CLOSE ============ */
   section.close {
     background: var(--ink);
