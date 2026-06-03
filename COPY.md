@@ -205,7 +205,7 @@ The account today is 100% conversion targeting 2.6M to 3M cold people inside a 1
 
 **Headline:** Creative direction. *The look.*
 **Subhead:** Moodboard first. Mockups second.
-**Section intro:** Every paid ad has to live on a feed next to organic posts. The creative direction is built to feel native to Instagram and Meta first, polished second. Lifestyle-forward, golf-coded, anti-country-club. Built to resonate, not announce. Bunkr's voice, not an agency's.
+**Section intro:** Every paid ad has to live on a feed next to organic posts. The creative direction is built to feel native to Instagram and Meta first, polished second. Lifestyle-forward, golf-coded. Built to resonate, not announce. Bunkr's voice, not an agency's.
 
 ### Three creative pillars
 
@@ -415,8 +415,8 @@ Marketwake delivers the paid funnel and the local search anchor above. This sect
 ### Reviews tracker (lime box)
 
 **Eyebrow:** The climb to 100 · Google reviews · year one
-**Stats:** Now 12 → Year one goal 100
-**Visualization labels:** Tee · 0 | 88 reviews to go | Pin · 100
+**Stats:** Now 13 → Year one goal 100
+**Visualization labels:** Tee · 0 | 87 reviews to go | Pin · 100
 
 **Right side headline:** The single biggest lever in local search.
 **Body (paragraph 1):** Reviews compound. Each one makes the next one easier to earn, harder for competitors to catch, and more useful as a signal to Google. The 100 number is the goal. The velocity is what matters.
